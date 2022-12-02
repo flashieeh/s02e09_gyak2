@@ -14,17 +14,17 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-#középsõ {
+#kozepso{
     display: flex;
     flex-direction: row;
     flex-grow: 1 ;
 }
-#válaszok {
+#valaszok{
     flex-grow: 1;
     flex-shrink: 1;
 }
 
-#kép {
+#kep {
     overflow: hidden;
 }
 #vezérlõ {

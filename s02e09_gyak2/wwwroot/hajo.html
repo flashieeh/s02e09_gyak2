@@ -8,25 +8,26 @@
     <title></title>
 </head>
 <body>
+    <script src="main.js"></script>
     <div id="külsõ">
-        <div id="kérdés_szöveg">
+        <div id="kerdes_szoveg">
             Kérdés szövege
         </div>
 
-        <div id="középsõ">
-            <div id="válaszok">
-                <div id="válasz1" class="kerdes">Válasz 1</div>
-                <div id="válasz2" class="kerdes">Válasz 2</div>
-                <div id="válasz3" class="kerdes">Válasz 3</div>
+        <div id="kozepso">
+            <div id="valaszok">
+                <div id="valasz1" onclick="választás(1)" class="kerdes">Válasz 1</div>
+                <div id="valasz2" onclick="választás(2)" class="kerdes">Válasz 2</div>
+                <div id="valasz3" onclick="választás(3)" class="kerdes">Válasz 3</div>
             </div>
-            <div id="kép">
-                <img id="kép1" src="https://kzgzdiag426.blob.core.windows.net/netcore/teszt-0050.jpg" />
+            <div id="kep">
+                <img id="kep1" src="https://kzgzdiag426.blob.core.windows.net/netcore/teszt-0050.jpg" />
             </div>
         </div>
         <div id="vezérlõ">
-            <div class="gomb kattintható">Vissza</div>
-            <div class="gomb kattintható">Elõre</div>
+            <div class="gomb kattintható" id="vissza_gomb">Vissza</div>
+            <div class="gomb kattintható" id="elore_gomb">Elõre</div>
         </div>
     </div>
-    <script src="main.js"></script>
+
 </body>
