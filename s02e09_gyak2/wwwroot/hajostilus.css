@@ -1,0 +1,42 @@
+div {
+    margin: 10px;
+    border: 1px solid red
+}
+#külsõ {
+    height: 100%;
+    flex-direction: column;
+}
+html, body {
+    height: 100%;
+}
+#külsõ {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#középsõ {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1 ;
+}
+#válaszok {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#kép {
+    overflow: hidden;
+}
+#vezérlõ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.gomb {
+    padding: 20px;
+    width: 80px;
+}
+.kattintható:hover {
+    background-color: blue;
+    color: white;
+}
