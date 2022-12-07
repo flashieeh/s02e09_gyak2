@@ -20,12 +20,13 @@ function kerdesmegj() {
     document.getElementById("valasz2").innerText = kerdes.answer2
     document.getElementById("valasz3").innerText = kerdes.answer3
     joValasz = kerdes.correctAnswer;
+
     if (kerdes.image) {
-        document.getElementById("kep").src = "https://szoft1.comeback.hu/hajo/" + kerdes.image;
-        document.getElementById("kep").classList.remove("rejtett")
+        document.getElementById("kep1").src = "https://szoft1.comeback.hu/hajo/" + kerdes.image;
+        document.getElementById("kep1").classList.remove("rejtett")
     }
     else {
-        document.getElementById("kep").classList.add("rejtett")
+        document.getElementById("kep1").classList.add("rejtett")
     }
     document.getElementById("valasz1").classList.remove("jó", "rossz");
     document.getElementById("valasz2").classList.remove("jó", "rossz");
