@@ -12,9 +12,10 @@ namespace s02e09_gyak2.Controllers
         public IActionResult AllQuestions()
         {
             HajosContext context = new HajosContext();
-            var kérdések = from x in context.Questions select x.Question1;
+           
+                var kérdések = from x in context.Questions select x.Question1;
+                return Ok(kérdések);
 
-            return Ok(kérdések);
         }
 
         [HttpGet]
@@ -22,13 +23,32 @@ namespace s02e09_gyak2.Controllers
         public ActionResult M2(int sorszám)
         {
             HajosContext context = new HajosContext();
-            var kérdés = (from x in context.Questions
-                          where x.QuestionId == sorszám
+
+
+                var kérdés = (from x in context.Questions
+                              where x.QuestionId == sorszám
+                              select x).FirstOrDefault();
+
+                if (kérdés == null)
+            {
+                int kérdésekSzáma = context.Questions.Count();
+                
+                kérdés = (from x in context.Questions
+                          where x.QuestionId == (sorszám % kérdésekSzáma)
                           select x).FirstOrDefault();
+            }
+            return new JsonResult(kérdés);}
 
-            if (kérdés == null) return BadRequest("Nincs ilyen sorszámú kérdés");
 
-            return new JsonResult(kérdés);
+        
+        [HttpGet]
+        [Route("questions/count")]
+        public int M4()
+        {
+            HajosContext context = new HajosContext();
+            int kérdésekSzáma = context.Questions.Count();
+
+            return kérdésekSzáma;
         }
     }
 }
